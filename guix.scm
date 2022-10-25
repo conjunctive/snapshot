@@ -1,0 +1,21 @@
+(use-modules
+  (guix packages)
+  ((guix licenses) #:prefix license:)
+  (guix build-system clojure)
+  (gnu packages)
+  (gnu packages base)
+  (gnu packages compression)
+  (gnu packages clojure)
+  (gnu packages java))
+
+(package
+  (name "clojure-snapshot")
+  (version "0.0.1")
+  (source #f)
+  (build-system clojure-build-system)
+  (arguments `(#:jdk ,openjdk17))
+  (native-inputs (list clojure-tools unzip gnu-make))
+  (synopsis "")
+  (description "")
+  (home-page "https://github.com/conjunctive/snapshot")
+  (license license:expat))
